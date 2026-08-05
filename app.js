@@ -17,10 +17,6 @@ const usuariosContainer = document.querySelector(".usuarios")
 const newBiblioteca = new Biblioteca()
 
 const localstorage = JSON.parse(localStorage.getItem("libros")) || [];
-console.log(localstorage);
-
-
-
 
 inputRegisterLibros.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -30,26 +26,25 @@ inputRegisterLibros.addEventListener("submit", (e) => {
 
     const newLibro = new Libro(titulo, autor, isbn)
 
-
-    console.log("Imprime el libro recien creado");
-    console.log(newLibro)
     newBiblioteca.agregarLibros(newLibro)
+    printLibros()
     //Revisar como guardar en el localStorage al crear el item  
-
-
 
 })
 
-
-
 const printLibros = () => {
+    listadoLibros.innerHTML = ""
+
+    let localstorage = JSON.parse(localStorage.getItem("libros"))
+
     localstorage.forEach(({ titulo, autor, isbn, prestado }) => {
 
         const libroHTML = `<article>
                 <h4>Nombre de libro: ${titulo}</h4>
-                <p>Autor:${autor} </p>
-                <p>isbn:${isbn}</p>
+                <p>Autor: ${autor}</p>
+                <p>isbn: ${isbn}</p>
                 <p>Prestado: ${prestado ? "si" : "no"}</p>
+                <br>
               </article>`
 
 
@@ -59,9 +54,6 @@ const printLibros = () => {
 }
 
 printLibros()
-
-
-
 
 // console.log(JSON.parse(localStorage.getItem("libros")));
 /* 
