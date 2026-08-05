@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <section>
+        <div class="container">
+          <div class="libros">
+            <h2>Libros Registrados</h2>
+            <form id="registroLibros">
+              <div class="registrarLibro">
+                <div>
+                  <label for="tituloLibro">Titulo Libro</label>
+                  <input id="tituloLibro" name="tituloLibro" />
+                </div>
+                <div>
+                  <label for="isbnLibro">ISBN Libro</label>
+                  <input id="isbnLibro" name="isbnLibro" />
+                </div>
+                <div>
+                  <label for="autorLibro">Autor</label>
+                  <input id="autorLibro" name="autorLibro" />
+                </div>
+              </div>
+              <button class="btn-form" type="submit">Registrar</button>
+            </form>
+
+            <div class="listadoLibros">
+              <article>
+                <h4>Nombre de libro</h4>
+                <p>Autor:</p>
+                <p>isbn:</p>
+                <p>Prestado: si</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="usuarios">
+            <h2>Usuarios Registrados</h2>
+            <form id="registroUsuarios">
+              <div class="registrarLibro">
+                <div>
+                  <label for="nombreUsuario">Nombre Usuario</label>
+                  <input id="nombreUsuario" name="nombreUsuario" />
+                </div>
+                <div>
+                  <label for="librosPrestados">Libros prestados</label>
+                  <input id="librosPrestados" name="librosPrestados" />
+                </div>
+              </div>
+              <button class="btn-form" type="submit">Registrar</button>
+            </form>
+            <article>
+              <h4>Usuario: Nombre usuario</h4>
+              <p>Libros prestados:</p>
+              <ul>
+                <li>Libro 1</li>
+                <li>Libro 2</li>
+                <li>Libro 3</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

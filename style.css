@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  padding: 1rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  /*align-items: center;
+     justify-content:center; */
+  gap: 2rem;
+  width: 100%;
+}
+
+.usuarios {
+  margin-left: auto;
+}
+
+.libros {
+}
+
+.btn-form {
+  background: #333;
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+
+  &:hover {
+    background: #555;
+    cursor: pointer;
+  }
+}
